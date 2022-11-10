@@ -13,7 +13,7 @@ const store = createStore({
     },
     actions: {
         async getData({commit}) {
-            let res = await axios.get("/api");
+            let res = await axios.get("/vue_vuex_axios_sample/api");
             console.log(res)
             commit('updateData', res.data);
         }
