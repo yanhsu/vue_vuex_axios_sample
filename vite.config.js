@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   server:{
     proxy: {
-      '/vue_vuex_axios_sample/api': {
+      '/api': {
            target: 'https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=1',
            changeOrigin: true,
            secure: false,
