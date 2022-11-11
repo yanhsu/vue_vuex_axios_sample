@@ -13,7 +13,9 @@ const store = createStore({
     },
     actions: {
         async getData({commit}) {
-            let res = await axios.get("/vue_vuex_axios_sample/api");
+            let res = await axios.get("https://cors-anywhere.herokuapp.com/https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=1",{
+                headers: {'Accept': 'application/json'},
+            });
             console.log(res)
             commit('updateData', res.data);
         }
