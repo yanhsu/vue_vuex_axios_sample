@@ -32,7 +32,7 @@ let fix =  function() {
       blur="2px"
       rounded="sm"
     >
-      <h1 style="text-align: center;">台北旅遊圖鑑</h1>
+      <h1 style="text-align: center;" class="mb-5">台北旅遊圖鑑</h1>
       <!-- <div class="center">
         <b-button variant="secondary" disabled v-show="isLoad">
         <b-spinner small></b-spinner>
@@ -41,12 +41,11 @@ let fix =  function() {
       </div> -->
       <div class="center"  v-show="isError">
         <b-button variant="danger" disabled >
-        <b-spinner small></b-spinner>
           {{ errorMsg }}
         </b-button>
         <div class="ms-2">
           <b-button variant="primary" @click="fix">
-            點擊按鈕修復api
+            點此按鈕開啟新分頁存取api權限
           </b-button>
         </div>
       </div>
