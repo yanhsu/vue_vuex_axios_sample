@@ -73,7 +73,7 @@ let fix =  function() {
         </b-row>
       </b-container>
     </b-overlay>
-    <div class="center" v-show="!isLoad">
+    <div class="center" v-show="!isLoad&&!isError">
       <b-pagination
         v-model="currentPage"
         :total-rows="total"
