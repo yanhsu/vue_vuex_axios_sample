@@ -22,10 +22,10 @@ const store = createStore({
         }
     },
     actions: {
-        async getData({commit}) {
+        async getData({commit}, payload) {
             try {
                 commit('updateLoad', true);
-                let res = await axios.get("https://cors-anywhere.herokuapp.com/https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=1",{
+                let res = await axios.get(`${"https://cors-anywhere.herokuapp.com/https://www.travel.taipei/open-api/zh-tw/Attractions/All?page="}${payload}`,{
                     headers: {'Accept': 'application/json'},
                 });
                 console.log(res)
