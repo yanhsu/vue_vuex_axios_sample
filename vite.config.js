@@ -10,7 +10,7 @@ export default defineConfig({
       '/api': {
            target: 'https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=1',
            changeOrigin: true,
-           secure: false,
+           secure: true,
            rewrite: (path) => path.replace(/^\/api/, '')
        }
     }
